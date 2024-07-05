@@ -61,7 +61,7 @@ body {
   }
   
   #reset-btn:hover {
-    background-color: #f44336;
+    background-color: #e53935;
   }
 
   #calculate-btn {
@@ -70,5 +70,5 @@ body {
   }
   
   #calculate-btn:hover {
-    background-color: #4caf50;
+    background-color: #45a049;
   }
