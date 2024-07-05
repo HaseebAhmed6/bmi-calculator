@@ -16,3 +16,11 @@ body {
     width: 300px;
     text-align: center;
   }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
