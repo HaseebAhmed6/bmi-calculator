@@ -6,69 +6,79 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
+}
 
-  .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-  }
+.container {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+width: 300px;
+text-align: center;
+}
 
-  h1 {
-    margin-bottom: 20px;
-  }
+h1 {
+margin-bottom: 20px;
+}
+
+.input-group {
+margin-bottom: 15px;
+}
+
+label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
+
+input {
+width: calc(100% - 20px);
+padding: 10px;
+margin: 0 auto;
+display: block;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.button-group {
+display: flex;
+justify-content: space-between;
+margin-top: 15px;
+}
+
+button {
+width: 45%;
+padding: 10px;
+border: none;
+border-radius: 4px;
+font-size: 16px;
+cursor: pointer;
+}
+
+#reset-btn {
+background-color: #f44336;
+color: white;
+}
+
+#reset-btn:hover {
+background-color: #e53935;
+}
+
+#calculate-btn {
+background-color: #4caf50;
+color: white;
+}
+
+#calculate-btn:hover {
+background-color: #45a049;
+}
+
+#result {
+margin-top: 20px;
+}
+
+#bmi-value,
+#bmi-category {
+  font-weight: bold;
+}
   
-  .input-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 0 auto;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  .button-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-
-  button {
-    width: 45%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  #reset-btn {
-    background-color: #f44336;
-    color: white;
-  }
-  
-  #reset-btn:hover {
-    background-color: #e53935;
-  }
-
-  #calculate-btn {
-    background-color: #4caf50;
-    color: white;
-  }
-  
-  #calculate-btn:hover {
-    background-color: #45a049;
-  }
