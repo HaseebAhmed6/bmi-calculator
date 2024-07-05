@@ -39,3 +39,36 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  button {
+    width: 45%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #reset-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  #reset-btn:hover {
+    background-color: #f44336;
+  }
+
+  #calculate-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  #calculate-btn:hover {
+    background-color: #4caf50;
+  }
