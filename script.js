@@ -15,7 +15,19 @@ function calculateBMI(height, weight) {
     }
   }
   
+  document.getElementById('calculate-btn').addEventListener('click', () => {
+    const weight = parseFloat(document.getElementById('weight').value);
+    const height = parseFloat(document.getElementById('height').value);
+  
+    const bmiValue = calculateBMI(weight, height);
+    document.getElementById('bmi-value').innerText = bmiValue;
+
+    const bmiCategory = getBMICategory(parseFloat(bmiValue));
+    document.getElementById('bmi-category').innerText = bmiCategory;
+  });
+  
   module.exports = {
     calculateBMI,
     getBMICategory
 };
+
