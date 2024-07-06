@@ -1,6 +1,12 @@
 function calculateBMI(height, weight) {
-    height = height / 100; // Convert height from cm to meters
-    return weight / (height * height);
+    if (!height || !weight) {
+        throw new Error('Please enter values for height and weight.');
+    }
+    else {
+        height = height / 100; // Convert height from cm to meters
+        return weight / (height * height);
+    }
+
   }
   
   function getBMICategory(bmiValue) {
@@ -16,14 +22,20 @@ function calculateBMI(height, weight) {
   }
   
   document.getElementById('calculate-btn').addEventListener('click', () => {
-    const weight = parseFloat(document.getElementById('weight').value);
-    const height = parseFloat(document.getElementById('height').value);
-  
-    const bmiValue = calculateBMI(height, weight);
-    document.getElementById('bmi-value').innerText = bmiValue;
+    try {
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value);
+    
+        const bmiValue = calculateBMI(height, weight);
+        document.getElementById('bmi-value').innerText = bmiValue;
 
-    const bmiCategory = getBMICategory(parseFloat(bmiValue));
-    document.getElementById('bmi-category').innerText = bmiCategory;
+        const bmiCategory = getBMICategory(parseFloat(bmiValue));
+        document.getElementById('bmi-category').innerText = bmiCategory;
+    } catch (error) {
+        document.getElementById('bmi-value').innerText = '';
+        document.getElementById('bmi-category').innerText = '';
+        alert(error.message);
+    }
   });
 
   document.getElementById('reset-btn').addEventListener('click', () => {
