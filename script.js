@@ -25,6 +25,12 @@ function calculateBMI(height, weight) {
     const bmiCategory = getBMICategory(parseFloat(bmiValue));
     document.getElementById('bmi-category').innerText = bmiCategory;
   });
+
+  document.getElementById('reset-btn').addEventListener('click', () => {
+    document.getElementById('bmi-form').reset();
+    document.getElementById('bmi-value').innerText = '';
+    document.getElementById('bmi-category').innerText = '';
+});
   
   module.exports = {
     calculateBMI,
