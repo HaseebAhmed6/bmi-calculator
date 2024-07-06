@@ -2,6 +2,9 @@ function calculateBMI(height, weight) {
     if (!height || !weight) {
         throw new Error('Please enter values for height and weight.');
     }
+    else if (height <= 0 || weight <= 0) {
+        throw new Error('Height and weight must be greater than 0.');
+    }
     else {
         height = height / 100; // Convert height from cm to meters
         return weight / (height * height);
