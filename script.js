@@ -19,7 +19,7 @@ function calculateBMI(height, weight) {
     const weight = parseFloat(document.getElementById('weight').value);
     const height = parseFloat(document.getElementById('height').value);
   
-    const bmiValue = calculateBMI(weight, height);
+    const bmiValue = calculateBMI(height, weight);
     document.getElementById('bmi-value').innerText = bmiValue;
 
     const bmiCategory = getBMICategory(parseFloat(bmiValue));
