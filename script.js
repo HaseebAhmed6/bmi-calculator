@@ -31,7 +31,7 @@ if (typeof document !== 'undefined') {
         const height = parseFloat(document.getElementById('height').value);
 
         const bmiValue = calculateBMI(height, weight);
-        document.getElementById('bmi-value').innerText = bmiValue;
+        document.getElementById('bmi-value').innerText = bmiValue.toFixed(2);
 
         const bmiCategory = getBMICategory(parseFloat(bmiValue));
         document.getElementById('bmi-category').innerText = bmiCategory;
