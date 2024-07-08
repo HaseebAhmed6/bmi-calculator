@@ -2,7 +2,7 @@ const { calculateBMI, getBMICategory } = require('../script.js');
 
 describe('calculateBMI function', () => {
     test('calculates BMI correctly for valid inputs', () => {
-        expect(calculateBMI(180, 75)).toBeCloseTo(23.15, 2);
+        expect(calculateBMI(180, 75)).toBe("23.15");
     });
 
     test('throws an error if height or weight is missing ', () => {
