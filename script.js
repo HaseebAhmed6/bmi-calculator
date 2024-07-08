@@ -1,16 +1,15 @@
 function calculateBMI(height, weight) {
-    if (!height || !weight) {
-        throw new Error('Please enter values for height and weight.');
-    }
-    else if (height <= 0 || weight <= 0) {
-        throw new Error('Height and weight must be greater than 0.');
-    }
-    else {
-        height = height / 100; // Convert height from cm to meters
-        return weight / (height * height);
-    }
-
+  if (!height || !weight) {
+      throw new Error('Please enter values for height and weight.');
   }
+  else if (height <= 0 || weight <= 0) {
+      throw new Error('Height and weight must be greater than 0.');
+  }
+  else {
+      height = height / 100; // Convert height from cm to meters
+      return (weight / (height * height)).toFixed(2);
+  }
+}
   
 function getBMICategory(bmiValue) {
   if (bmiValue < 18.5) {
@@ -31,7 +30,7 @@ if (typeof document !== 'undefined') {
         const height = parseFloat(document.getElementById('height').value);
 
         const bmiValue = calculateBMI(height, weight);
-        document.getElementById('bmi-value').innerText = bmiValue.toFixed(2);
+        document.getElementById('bmi-value').innerText = bmiValue;
 
         const bmiCategory = getBMICategory(parseFloat(bmiValue));
         document.getElementById('bmi-category').innerText = bmiCategory;
