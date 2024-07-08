@@ -1,8 +1,15 @@
 const { calculateBMI, getBMICategory } = require('../script.js');
 
-test('calculates BMI correctly', () => {
-  expect(calculateBMI(180, 75)).toBeCloseTo(23.15, 2);
+describe('BMI Calculator', () => {
+    test('calculates BMI correctly for valid inputs', () => {
+        expect(calculateBMI(180, 75)).toBeCloseTo(23.15, 2);
+    });
+    test('throws an error if height or weight is missing ', () => {
+        expect(() => calculateBMI(null, 75)).toThrow('Please enter values for height and weight.');
+        expect(() => calculateBMI(180, null)).toThrow('Please enter values for height and weight.');
+    });
 });
+
 
 test('categorises BMI correctly', () => {
   expect(getBMICategory(18)).toBe('Underweight');
