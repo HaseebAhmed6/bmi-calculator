@@ -8,6 +8,11 @@ describe('BMI Calculator', () => {
         expect(() => calculateBMI(null, 75)).toThrow('Please enter values for height and weight.');
         expect(() => calculateBMI(180, null)).toThrow('Please enter values for height and weight.');
     });
+    
+    test('throws an error if height or weight is set to 0 ', () => {
+        expect(() => calculateBMI(0, 75)).toThrow('Please enter values for height and weight.');
+        expect(() => calculateBMI(180, 0)).toThrow('Please enter values for height and weight.');
+    });
 });
 
 
