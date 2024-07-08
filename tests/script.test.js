@@ -21,10 +21,20 @@ describe('calculateBMI function', () => {
     });
 });
 
+describe('getBMICategory function', () => {
+    test('returns "Underweight" for BMI < 18.5', () => {
+        expect(getBMICategory(18)).toBe('Underweight');
+    });
 
-test('categorises BMI correctly', () => {
-  expect(getBMICategory(18)).toBe('Underweight');
-  expect(getBMICategory(21)).toBe('Normal weight');
-  expect(getBMICategory(28)).toBe('Overweight');
-  expect(getBMICategory(33)).toBe('Obesity');
+    test('returns "Normal weight" for BMI between 18.5 and 24.9', () => {
+        expect(getBMICategory(21)).toBe('Normal weight');
+    });
+
+    test('returns "Overweight" for BMI between 25 and 29.9', () => {
+        expect(getBMICategory(28)).toBe('Overweight');
+    });
+
+    test('returns "Obesity" for BMI >= 30', () => {
+        expect(getBMICategory(33)).toBe('Obesity');
+    });
 });
