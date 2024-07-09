@@ -1,5 +1,6 @@
 const { calculateBMI, getBMICategory } = require('../script.js');
 
+// Tests for the calculateBMI function
 describe('calculateBMI function', () => {
     test('calculates BMI correctly for valid inputs', () => {
         expect(calculateBMI(180, 75)).toBe("23.15");
@@ -21,6 +22,7 @@ describe('calculateBMI function', () => {
     });
 });
 
+// Tests for the getBMICategory function
 describe('getBMICategory function', () => {
     test('returns "Underweight" for BMI < 18.5', () => {
         expect(getBMICategory(18)).toBe('Underweight');

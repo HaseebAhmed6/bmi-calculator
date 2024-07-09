@@ -1,3 +1,4 @@
+/* Basic styling for the entire page */
 body {
     font-family: Arial, sans-serif;
     background-color: #e6e6fa;
@@ -8,6 +9,7 @@ body {
     height: 100vh;
 }
 
+/* Container styling for centering and formatting the form */
 .container {
 background-color: #fff;
 padding: 20px;
@@ -17,6 +19,7 @@ width: 300px;
 text-align: center;
 }
 
+/* Styling for input groups and form elements */
 h1 {
 margin-bottom: 20px;
 }
