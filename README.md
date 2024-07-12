@@ -124,3 +124,27 @@ npm test
 - **Security**
   - As soon as data is processed, it needs to be cleaned.
 
+## Design
+
+Figma was used to create designs ranging from the initial wireframe design to highly detailed mock-up designs. The designs include the input fields, buttons and a result section to display the outputs.
+
+### Wireframe Design
+
+![Wireframe design](./images/design/wireframe.png)
+
+### Detailed Mockup Designs
+
+Design 1
+
+![Mockup design 1](./images/design/mockup_design1.png)
+
+Design 2
+
+![Mockup design 2](./images/design/mockup_design2.png)
+
+Design 3
+
+![Mockup design 2](./images/design/mockup_design3.png)
+
+Design 3 was chosen as the final design due to its clean and minimalistic layout with the container containing all the components. The white container enhances visual clarity due to the contrasting background which ensures the functional components of the app stand out. In addition, the contrasting colours can also be seen for the reset and calculate buttons, where they enhance visual clarity and make the navigation process very simple for the user overall.
+
