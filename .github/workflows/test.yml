@@ -1,0 +1,20 @@
+name: Node.js CI
+
+on:
+  pull_request:
+    branches: ["main", "devel"] # Run workflow on pull requests to these branches
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4 # Check out the repository
+      - name: Use Node.js
+        uses: actions/setup-node@v3 # Set up Node.js environment
+        with:
+          node-version: 16.x
+          cache: "npm"
+      - run: npm ci # Install npm dependencies
+      - run: npm run build --if-present
+      - run: npm test # Run tests using the npm test script
