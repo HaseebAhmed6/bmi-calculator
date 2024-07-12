@@ -84,3 +84,43 @@ To use the BMI Calculator:
 npm test
 ```
 
+## Requirement Analysis
+
+### Functional Requirements
+
+- **User input**
+  - Weight (kg)
+  - Height (cm)
+- **Calculate button**
+- **BMI calculation**
+  - Calculate BMI using the formula:
+    $$ \text{BMI} = \frac{\text{weight (kg)}}{\left(\frac{\text{height (cm)}}{100}\right)^2} $$
+  - Display BMI value
+- **BMI category**
+  - Calculate the BMI category based on the value:
+    - **Underweight:** BMI less than 18.5
+    - **Normal weight:** BMI 18.5–24.9
+    - **Overweight:** BMI 25–29.9
+    - **Obese:** BMI 30 or greater
+  - Display BMI category
+- **Error handling**
+  - Provide error messages for invalid input (e.g., negative values).
+- **Reset button**
+  - Allow the user to reset input fields and results
+
+### Non-Functional Requirements
+
+- **Performance**
+  - Fast load time
+  - Quick calculations
+- **Usability**
+  - Intuitive and user-friendly
+  - Clear labels and instructions
+- **Compatibility**
+  - Support for major web browsers
+- **Maintainability**
+  - Clean and well-documented codebase
+    cl - Use of version control for tracking changes
+- **Security**
+  - As soon as data is processed, it needs to be cleaned.
+
