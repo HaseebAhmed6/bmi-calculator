@@ -7,15 +7,15 @@ Deployed to GitHub pages and can be viewed [**here**](https://haseebahmed6.githu
 
 ## Project Overview
 
-At my workplace, there is a huge focus on employee well-being, and as part of these efforts, we are creating a simple BMI (body mass index) calculator web app. This BMI-calculator web app will be part of our broader employee wellness program and will play a key part in our employees being able to monitor their health related to their weight. The wider goal of this web app is to promote a healthy lifestyle which includes the likes of dieting and exercise, leading to overall improved employee health and well-being.
+At my workplace, there is a huge focus on employee well-being, and as part of these efforts, we are creating a simple BMI (Body Mass Index) calculator web app. This BMI-calculator web app will be part of our broader employee wellness program and will play a key part in our employees being able to monitor their health related to their weight. The wider goal of this web app is to promote a healthy lifestyle which includes the likes of dieting and exercise, leading to overall improved employee health and well-being.
 
-A BMI (Body Mass Index) calculator is used to determine BMI of individuals, which is a numerical value calculated from their height and weight. The BMI can then be used to categorise individuals into different weight categories, such as underweight, normal weight, overweight, and obesity.
+A BMI calculator is used to determine BMI of individuals, which is a numerical value calculated from their height and weight. The BMI can then be used to categorise individuals into different weight categories, such as underweight, normal weight, overweight, and obesity.
 
 ## Features
 
-- **BMI Calculation**: Calculates the BMI value using the weight and height inputs.
-- **BMI Categorisation**: Categorises into underweight, normal weight, overweight, and obesity based on the BMI value.
-- **Reset Functionality**: Allows users to reset the input fields and results.
+- **BMI calculation**: Calculates the BMI value using the weight and height inputs.
+- **BMI categorisation**: Categorises into underweight, normal weight, overweight, and obesity based on the BMI value.
+- **Reset functionality**: Allows users to reset the input fields and results.
 
 ## User Documentation
 
@@ -109,7 +109,7 @@ npm test
 - **Error handling**
   - Provide error messages for invalid input (e.g., negative values).
 - **Reset button**
-  - Allow the user to reset input fields and results
+  - Allow the user to reset input fields and results.
 
 ### Non-Functional Requirements
 
@@ -123,9 +123,7 @@ npm test
   - Support for major web browsers
 - **Maintainability**
   - Clean and well-documented codebase
-    cl - Use of version control for tracking changes
-- **Security**
-  - As soon as data is processed, it needs to be cleaned.
+  - Use of version control for tracking changes
 
 ## Design
 
@@ -153,13 +151,13 @@ Design 3 was chosen as the final design due to its clean and minimalistic layout
 
 ## Project Management
 
-GitHub projects was used to manage the project overall by implementing agile methodology. In particular, scrum methodology was implemented to structure the project using sprints. Overall, the project was split into two sprints, where the first sprint focused on designing and creating basic HTML and CSS, and the second sprint focused on functionality using JavaScript, testing and documentation for the calculator. Below is a screenshot of our GitHub project board around the timeline of when sprint 1 was near its ending, and sprint 2 was about to start.
+GitHub projects was used to manage the project overall by adopting agile methodology. In particular, scrum methodology was implemented to structure the project using sprints. Overall, the project was split into two sprints, where the first sprint focused on designing and creating basic HTML and CSS, and the second sprint focused on functionality using JavaScript, testing and documentation for the calculator. Below is a screenshot of our GitHub project board around the timeline of when sprint 1 was near its ending, and sprint 2 was about to start.
 
 ![Github Projects](./images/project_management/github_projects.png)
 
 In order to track the progress of tickets, the GitHub projects board was customised to host sections ranging from backlog, to-do and in progress to review/testing and done. This ensured I could clearly visualise the progress of the overall development in the form of tickets relative to different stages and also other tickets on the board. In addition, the tickets were also tagged with labels for further clarity around the purpose of a ticket as well as linked PRs (pull requests) to illustrate explicit connection to the code being developed. Each ticket also had a branch associated with it to separate the overall development into smaller interconnected chunks. Furthermore, a strict format and structure was followed to create stories for the development of this BMI calculator which can be seen below.
 
-![Story structure](./images/project_management/story_structure.png)
+![Story structure](./images/project_management/story.png)
 
 Following a strict structure for each story ensures every story is similar in format and hence leading to overall consistency in tracking and management of the project. The format contained three sections:
 
@@ -215,14 +213,14 @@ Conventional commit message structure:
 
 Further details about conventional commits can be found [**here**](https://www.conventionalcommits.org/en/v1.0.0/).
 
-## Code implementation
+## Code Implementation
 
 After setting up the overall repository with the “devel” branch, branch protection and conventional commits structure in place, I started to develop the codebase.
 
 - Index.html - I initially focused on creating the basic structure of the BMI calculator using HTML in the index.html file. The HTML file added the main components for the application, consisting of input fields, buttons and a results section. In addition, links to the CSS (styles.css) and JavaScript (script.js) were added to the HTML file to ensure a fully functional app can be developed.
 - styles.css – After the basic structure of the application was in place using HTML, I created a styles.css file to design the application with various components such as colour, fonts, placement etc. This really brought the application to life and made it look visually appealing and easy to navigate.
-- tests/ – After the visual aspect of the application was ready, I added tests for both functions, to ensure we can add JavaScript functionality with testing in place.
-- script.js – After the testing in place, javascript was used to create the calculateBMI and getBMICategory function, as well as listeners and logic for the buttons.
+- tests – After the visual aspect of the application was ready, I added tests for both functions, to ensure we can add JavaScript functionality with testing in place.
+- script.js – After the testing in place, JavaScript was used to create the calculateBMI and getBMICategory functions, as well as listeners and logic for the buttons.
 
 ## Error Handling 
 ![Missing input values](./images/development/missing_values.png) ![Negative input values](./images/development/negative_values.png)
@@ -246,9 +244,9 @@ Unit tests for the calculateBMI function based on:
 Unit tests for the getBMICategory function based on:
 
 - input = < 18.5
-- input = 18.5 < and >24.9
-- inputs = 25 < and >29.9
-- inputs = 30 <
+- input = 18.5 <= and =>24.9
+- inputs = 25 <= and =>29.9
+- inputs = 30 <=
 
 Invalid values are not tested in the getBMICategory function as all necessary input validations are handled in the calculateBMI function.
 
@@ -267,13 +265,13 @@ Accessibility testing was carried out using Lighthouse which is an open-source t
 1. Performance (100) – A score of 100 means the BMI calculator application is highly optimised for speed, ensuring it loads quickly and smoothly for a good user experience.
 2. Accessibility (95) – A score of 95 suggests my application is highly accessible for a range of users and overall adheres to the web accessibility standards. However, there can be further changes made to optimise it further to potentially reach a score of 100.
 3. Best Practices (96) – A score of 96 indicates that my application follows industry standards and best practices for web applications to a really high degree.
-4. SEO (90) – A score of 90 for SEO would mean my application is very well optimised for search engines, and it would be easily discoverable in search engines, making it more visible in search results. However, it should be noted that SEO would only be an important factor in the case of an intention to make this application more visible to the public.
+4. SEO (90) – A score of 90 for SEO would mean my application is very well optimised for search engines, and it would be easily discoverable in search engines, making it more visible in search results.
 
 ### Continuous Integration (CI)
 
 ![Github Actions](./images/testing/ci.png)
 
-The continuous integration pipeline above was created in YAML to run automated tests when a pull request to “devel” or “main” is created. This GitHub action installs all the npm dependencies and runs the test using:
+The continuous integration pipeline above was created in YAML to run automated tests when a pull request to “devel” or “main” is created. This GitHub action installs all the npm dependencies in the environment and runs the test using:
 
 ```sh
 npm test
@@ -289,4 +287,4 @@ Running automated tests allows us to avoid any bugs or critical logical issues s
 
 Overall, I’m really happy and satisfied with the outcome of this BMI calculator, particularly the design of it. I like the minimalistic design with really visually appealing colours, that make it really easy to navigate and use the calculator. In addition, I’m also happy with how I managed this project using GitHub projects alongside running two sprints which allowed me to split tasks effectively. Also being able to bring learnings such as consistent story writing templates, conventional commits and branching strategy/protection from my team at work into this project was really helpful and effective for me. It allowed me to bring industry practices which I have worked with into this project.
 
-On the other hand, I feel I can further improve this application by implementing a code coverage solution such as Codecov to provide a holistic report which would further improve the quality and reliability of my application. A code coverage solution would be really helpful in identifying any untested code and addressing any gaps in our test suite.
+On the other hand, I feel I can further improve this application by implementing a code coverage solution such as Codecov to provide a holistic report which would further improve the quality and reliability of my application. A code coverage solution would be really helpful in identifying any untested code and addressing any gaps in our test suite. In addition, we can also try to increase applications accessibility score to 100, by potentially making fine tweaks to our design such as increasing colour contrast.
