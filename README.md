@@ -172,3 +172,52 @@ A use story aims to break down the task into a simple description by looking at 
 
 The acceptance criteria aims to define clear conditions which must be met for the ticket to be considered done. This section helps avoid overall misunderstanding in the scope of the ticket and ensures everyone is clearly aligned on the expected outcome of the ticket.
 
+## Development
+
+### TDD (Test Driven Development)
+
+Test-driven development is a methodology within software development, where tests are usually written before the actual code. The tests will normally test small pieces of functionality, which in our case was our calculate BMI and categorise functions. Using this methodology ensures the codebase is thoroughly tested as it is being developed and allows for bug-free software to be developed.
+
+As per TDD methodology, unit tests for calculateBMI and getBMICategory functions were written before the development of the code itself. The tests initially were very minimal and aimed to just check the core functionality of the functions in terms of the BMI calculation and its categorisation logic. However, as we developed the codebase, more tests were added as different edge cases needed to be tested.
+
+### Branching Strategy
+
+The branching strategy adopted included a “devel” branch which was used as the base branch during development. All the feature branches were merged into “devel” rather than the “main” branch ensuring we protect and maintain a clean version of the main branch. The “devel” branch would only be merged into the “main” branch, once the full codebase was developed and tested.
+
+![Branching Strategy](./images/development/branching.png)
+
+In addition “main” and “devel” branches were also protected by:
+
+- Restricting deletion
+- Requiring a pull request before merging
+- Blocking force pushes
+
+These protection rules ensured a consistent development and branching method was enforced as well as preventing accidental pushes or deletions for the “devel” and “main” branches.
+
+![Branch protection setting](./images/development/branch_protection.png)
+
+### Conventional Commits
+
+Conventional commits were also adopted as part of this project, to ensure consistent and meaningful commit messages were being written. Using conventional commits leads to an explicit commit history, which makes it easier to understand the development of the project, and importantly track back on any issues and identify where they were introduced.
+
+Conventional commit message structure:
+
+```sh
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+Further details about conventional commits can be found [**here**](https://www.conventionalcommits.org/en/v1.0.0/).
+
+## Code implementation
+
+After setting up the overall repository with the “devel” branch, branch protection and conventional commits structure in place, I started to develop the codebase.
+
+- Index.html - I initially focused on creating the basic structure of the BMI calculator using HTML in the index.html file. The HTML file added the main components for the application, consisting of input fields, buttons and a results section. In addition, links to the CSS (styles.css) and JavaScript (script.js) were added to the HTML file to ensure a fully functional app can be developed.
+- styles.css – After the basic structure of the application was in place using HTML, I created a styles.css file to design the application with various components such as colour, fonts, placement etc. This really brought the application to life and made it look visually appealing and easy to navigate.
+- tests/ – After the visual aspect of the application was ready, I added tests for both functions, in order to ensure we can add JavaScript functionality with testing in place.
+- script.js – After the testing in place, javascript was used to create the calculateBMI and getBMICategory function, as well as listeners and logic for the buttons.
+
