@@ -221,3 +221,56 @@ After setting up the overall repository with the “devel” branch, branch prot
 - tests/ – After the visual aspect of the application was ready, I added tests for both functions, in order to ensure we can add JavaScript functionality with testing in place.
 - script.js – After the testing in place, javascript was used to create the calculateBMI and getBMICategory function, as well as listeners and logic for the buttons.
 
+## Testing
+
+### Unit Testing and Integration Testing
+
+Unit tests were written for the calculateBMI and getBMICategory functions, to test the outputs based on a variety of inputs.
+
+Unit tests for the calculateBMI function based on:
+
+- inputs = valid positive number
+- inputs = null/missing
+- inputs = 0
+- inputs = negative number
+
+Unit tests for the getBMICategory function based on:
+
+- input = < 18.5
+- input = 18.5 < and >24.9
+- inputs = 25 < and >29.9
+- inputs = 30 <
+
+Invalid values are not tested in the getBMICategory function because it's only called after valid inputs are verified by the calculateBMI function, ensuring all necessary input validations are handled in the calculateBMI function.
+
+![Unit and integration testing](./images/testing/unit_integration.png)
+
+Integration test aimed to test the functionality of both functions together as a whole rather than individually. Both functions were called as part of a single test with stimulated input values for both functions.
+
+In addition, as part of CI (continuous integration), these tests would run automatically when a pull request to the “devel” or “main” branch was created, using the GitHub actions pipeline. GitHub action and CI is discussed further below in the report.
+
+### Accessibility and Performance testing
+
+Accessibility testing was carried out using Lighthouse which is an open-source tool developed by Google to analyse the quality of the application with respect to performance, accessibility, best practices and SEO.
+
+![Accessibility testing](./images/testing/accessibility.png)
+
+1. Performance (100) – A score of 100 means the BMI calculator application is highly optimised for speed, ensuring it loads quickly and smoothly for a good user experience.
+2. Accessibility (95) – A score of 95 suggests my application is highly accessible for a range of users and overall adheres to the web accessibility standards. However, there can be further changes made to optimise it further to potentially reach a score of 100.
+3. Best Practices (96) – A score of 96 indicates that my application follows industry standards and best practices for web applications to a really high degree.
+4. SEO (90) – A score of 90 for SEO would mean my application is very well optimised for search engines, and it would be easily discoverable in search engines, making it more visible in search results. However, it should be noted that SEO would only be an important factor in the case of an intention to make this application more visible to the public.
+
+### Continuous Integration (CI)
+
+![Github Actions](./images/testing/ci.png)
+
+The continuous integration pipeline above was created in YAML to run automated tests when a pull request to “devel” or “main” is created. This GitHub action installs all the npm dependencies and runs the test using:
+
+```sh
+npm test
+```
+
+This CI pipeline does not run on "push" to these branches, as pushing directly to the "devel" and "main" branch is restricted.
+
+![CI testing at PR](./images/testing/ci_testing.png)
+Running automated tests allows us to avoid any bugs or critical logical issues sneaking into the “devel” or “main” branch. This was really helpful during the development phase as before the branch was merged, it would highlight any potential issues. However, this would be even more crucial if this application were to go to production with many users, as avoiding any bugs creeping into a production environment is really important for the credibility of the application.
