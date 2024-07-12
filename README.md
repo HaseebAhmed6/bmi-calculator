@@ -274,3 +274,13 @@ This CI pipeline does not run on "push" to these branches, as pushing directly t
 
 ![CI testing at PR](./images/testing/ci_testing.png)
 Running automated tests allows us to avoid any bugs or critical logical issues sneaking into the “devel” or “main” branch. This was really helpful during the development phase as before the branch was merged, it would highlight any potential issues. However, this would be even more crucial if this application were to go to production with many users, as avoiding any bugs creeping into a production environment is really important for the credibility of the application.
+
+## Deployment
+
+The BMI calculator application was deployed to GitHub pages and can be viewed [**here**](https://haseebahmed6.github.io/bmi-calculator/)
+
+## Evaluation
+
+Overall, I’m really happy and satisfied with the outcome of this BMI calculator, particularly the design of it. I really like the minimalistic design with really visually appealing colours, that make it really easy to navigate and use the calculator. In addition, I’m also really happy with how I managed this project using GitHub projects alongside running two sprints which allowed me to split tasks effectively. Also being able to bring learnings such as consistent story writing templates, conventional commits and branching strategy/protection from my team at work into this project was really helpful and effective for me. It allowed me to bring industry practices which I have worked with into this project.
+
+On the other hand, I feel I can further improve this application by implementing a code coverage solution such as Codecov to provide a holistic report which would further improve the quality and reliability of my application. A code coverage solution would be really helpful in identifying any untested code and addressing any gaps in our test suite.
