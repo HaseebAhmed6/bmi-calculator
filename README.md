@@ -148,3 +148,27 @@ Design 3
 
 Design 3 was chosen as the final design due to its clean and minimalistic layout with the container containing all the components. The white container enhances visual clarity due to the contrasting background which ensures the functional components of the app stand out. In addition, the contrasting colours can also be seen for the reset and calculate buttons, where they enhance visual clarity and make the navigation process very simple for the user overall.
 
+## Project Management
+
+GitHub projects was used to manage the project overall by implementing agile methodology. In particular, scrum methodology was implemented to structure the project using sprints. Overall, the project was split into two sprints, where the first sprint focused on designing and creating basic HTML and CSS, and the second sprint focused on functionality using JavaScript, testing and documentation for the calculator. Below is a screenshot of our GitHub project board around the timeline of when sprint 1 was near its ending, and sprint 2 was about to start.
+
+![Github Projects](./images/project_management/github_projects.png)
+
+In order to track the progress of tickets, the GitHub projects board was customised to host sections ranging from backlog, to-do and in progress to review/testing and done. This ensured I could clearly visualise the progress of the overall development in the form of tickets relative to different stages and also other tickets on the board. In addition, the tickets were also tagged with labels for further clarity around the purpose of a ticket as well as linked PRs (pull requests) to illustrate explicit connection to the code being developed. Each ticket also had a branch associated with it to separate the overall development into smaller interconnected chunks. Furthermore, a strict format and structure was followed to create stories for the development of this BMI calculator which can be seen below.
+
+![Story structure](./images/project_management/story_structure.png)
+
+Following a strict structure for each story ensures every story is similar in format and hence leading to overall consistency in tracking and management of the project. The format contained three sections:
+
+### Background
+
+The background section is used to provide overall context behind the need of the ticket. This may include explaining the current situation and why this task as part of this ticket is necessary, e.g. explaining a bug in the system.
+
+### User Story
+
+A use story aims to break down the task into a simple description by looking at it from the perspective of a specific stakeholder. This helps in aligning the overall focus for the task with a certain stakeholder and how it delivers value to the overall objective of the project.
+
+### Acceptance criteria
+
+The acceptance criteria aims to define clear conditions which must be met for the ticket to be considered done. This section helps avoid overall misunderstanding in the scope of the ticket and ensures everyone is clearly aligned on the expected outcome of the ticket.
+
