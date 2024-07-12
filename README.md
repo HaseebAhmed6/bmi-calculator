@@ -93,9 +93,13 @@ npm test
   - Height (cm)
 - **Calculate button**
 - **BMI calculation**
+
   - Calculate BMI using the formula:
-    $$ \text{BMI} = \frac{\text{weight (kg)}}{\left(\frac{\text{height (cm)}}{100}\right)^2} $$
+
+    BMI = weight (kg) / (height (cm)/100)^2
+
   - Display BMI value
+
 - **BMI category**
   - Calculate the BMI category based on the value:
     - **Underweight:** BMI less than 18.5
