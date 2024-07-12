@@ -225,6 +225,12 @@ After setting up the overall repository with the “devel” branch, branch prot
 - tests/ – After the visual aspect of the application was ready, I added tests for both functions, in order to ensure we can add JavaScript functionality with testing in place.
 - script.js – After the testing in place, javascript was used to create the calculateBMI and getBMICategory function, as well as listeners and logic for the buttons.
 
+## Error Handling 
+![Missing input values](./images/development/missing_values.png) ![Negative input values](./images/development/negative_values.png)
+
+I used the alert() JavaScript method to display errors back to the user. This was used due to its ability to force the user to read the message and take the focus away from the current window.
+
+
 ## Testing
 
 ### Unit Testing and Integration Testing
